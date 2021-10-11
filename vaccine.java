@@ -20,18 +20,6 @@ public class vaccine {
 
 	}
 
-	public static void add_vaccine(String Name, int number_of_doses, int gap) {
-		Scanner s = new Scanner(System.in);
-
-		System.out.println("Vaccine Name: ");
-		String v_n = s.next();
-		
-		System.out.println("Number of Doses: ");
-		int nofdoses = s.nextInt();
-		
-		System.out.println("Gap between Doses: ");
-		int gapbetweendoses = s.nextInt();
-		
-	}
+	
 
 }
