@@ -28,7 +28,7 @@ public class portal {
 		System.out.println("-------------------------------------");
 		int n = s.nextInt();
 		
-      		if (n==1) {
+        if (n==1) {
 			add_vaccine();
 		}
 		if (n==2) {
@@ -36,6 +36,9 @@ public class portal {
 		}
 		if (n== 3) {
 			register_citizen();
+		}
+		if (n==4) {
+			create_slot();
 		}
 		
 		}
@@ -88,9 +91,48 @@ public class portal {
 		System.out.println("Vaccine Name: "+v_n+", Number of Doses: "+nofdoses+", Gap Between Doses: "+ gapbetweendoses);
 		System.out.println("------------------------------------");
 		main(null);
+	}	
+	public static void create_slot() {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter Hospital ID: ");
+		int id = s.nextInt();
+		System.out.println("Enter number of Slots to be added: ");
+		int slot = s.nextInt();
+		System.out.println("Enter Day Number: ");
+		int day_number = s.nextInt();
+		System.out.println("Enter Quantity: ");
+		int quanti = s.nextInt();
+		System.out.println("Select Vaccine: ");
+		System.out.println("0. Covax");
+		System.out.println("1. Covi");
+		int sel = s.nextInt();
+		slot s1 = new slot(day_number, quanti, id, citizen.unique_array[citizen.how_many_citizen] );
+		if (sel ==0) {
+			System.out.println("Slot added by the Hospital "+id+ " for Day "+day_number+
+					", Available Quantity: "+ quanti+" of Vaccine Covax"  );
+			System.out.println("------------------------------------");
+			main(null);
+		}else if(sel==1) {
+			System.out.println("Slot added by the Hospital "+id+ " for Day "+day_number+
+					", Available Quantity: "+ quanti+" of Vaccine Covi"  );
+			System.out.println("------------------------------------");
+			main(null);
+		}
 	}
-	
-
-	
-	  }
+	public static void book_slot() {
+		Scanner s  = new Scanner(System.in);
+		System.out.println("Enter patient Unique ID: ");
+		BigInteger a = s.nextBigInteger();
+		System.out.println("1. Search by area");
+		System.out.println("2.Search by Vaccine");
+		System.out.println("3.Exit");
+		System.out.println("Enter option: ");
+		int x = s.nextInt();
+		if(x==1) {
+			System.out.println("Enter PinCode: ");
+			int pinco = s.nextInt();
+			System.out.println();
+		}
+	}
+ }
 
