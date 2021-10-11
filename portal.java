@@ -40,6 +40,9 @@ public class portal {
 		if (n==4) {
 			create_slot();
 		}
+		if (n==6) {
+			list_hospital();
+		}
 		
 		}
 	public static void register_citizen() {
@@ -134,5 +137,12 @@ public class portal {
 			System.out.println();
 		}
 	}
+	public static void list_hospital() {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter Hospital ID: ");
+		int hos_id = s.nextInt();
+		
+	}
  }
+
 
